@@ -16,7 +16,7 @@ export default function Hero() {
 
         <h1 className="mt-4 text-6xl font-extrabold leading-tight md:text-7xl">
           Hello, I&apos;m{" "}
-          <span className="bg-gradient-to-r from-blue-500 via-cyan-400 to-blue-300 bg-clip-text text-transparent">
+          <span className="bg-linear-to-r from-blue-500 via-cyan-400 to-blue-300 bg-clip-text text-transparent">
             Mubashir
           </span>{" "}
           👋

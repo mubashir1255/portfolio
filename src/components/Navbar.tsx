@@ -31,8 +31,9 @@ export default function Navbar() {
 
         {/* Resume Button */}
         <a
-          href="#"
-          className="hidden rounded-xl bg-blue-600 px-5 py-2 font-semibold text-white transition duration-300 hover:bg-blue-500 hover:shadow-lg hover:shadow-blue-500/40 md:block"
+        href="/Mubashir_Fayyaz_Resume.pdf"
+        download
+        className="hidden rounded-xl bg-blue-600 px-5 py-2 font-semibold text-white transition      duration-300 hover:bg-blue-500 hover:shadow-lg hover:shadow-blue-500/40 md:block"
         >
           Resume
         </a>
