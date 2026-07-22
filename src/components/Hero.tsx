@@ -1,32 +1,44 @@
+"use client";
+import { motion } from "framer-motion";
+
 export default function Hero() {
   return (
-    <section className="min-h-screen bg-black text-white flex items-center justify-center px-6">
-      <div className="max-w-3xl text-center">
-        <p className="text-blue-400 uppercase tracking-widest font-semibold">
+    <section className="min-h-screen bg-black pt-24 text-white flex items-center justify-center px-6">
+      <motion.div
+        initial={{ opacity: 0, y: 40 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+        className="mx-auto max-w-4xl text-center"
+      >
+        <p className="text-blue-400 uppercase tracking-[0.3em] font-semibold">
           Welcome
         </p>
 
-        <h1 className="mt-4 text-6xl font-extrabold">
-          Hi, I&apos;m Mubashir 👋
+        <h1 className="mt-4 text-6xl font-extrabold leading-tight md:text-7xl">
+          Hello, I&apos;m{" "}
+          <span className="bg-gradient-to-r from-blue-500 via-cyan-400 to-blue-300 bg-clip-text text-transparent">
+            Mubashir
+          </span>{" "}
+          👋
         </h1>
 
-        <h2 className="mt-4 text-2xl text-gray-300">
+        <h2 className="mt-6 text-2xl text-gray-300">
           IT Student • Full Stack Developer • Cloud Enthusiast
         </h2>
 
-        <p className="mt-6 text-lg text-gray-400">
-          I enjoy building modern web applications with React, Next.js,
-          TypeScript, Docker, and AWS. I&apos;m currently working on AgroBid
-          Pakistan and continuously improving my skills in full-stack
-          development.
+        <p className="mx-auto mt-6 max-w-3xl text-lg leading-8 text-gray-400">
+          I build fast, scalable, and modern web applications using Next.js,
+          React, TypeScript, Docker, PostgreSQL, and AWS. I&apos;m passionate
+          about creating software that solves real-world problems while
+          continuously learning new technologies.
         </p>
 
         <div className="mt-10 flex justify-center gap-4">
-          <button className="rounded-lg bg-white px-6 py-3 font-semibold text-black transition hover:scale-105">
+          <button className="rounded-xl bg-blue-600 px-7 py-3 font-semibold text-white transition-all duration-300 hover:-translate-y-1 hover:scale-105 hover:bg-blue-500 hover:shadow-xl hover:shadow-blue-500/40">
             View Projects
           </button>
 
-          <button className="rounded-lg border border-gray-600 px-6 py-3 transition hover:bg-gray-900">
+          <button className="rounded-xl border border-gray-600 px-7 py-3 transition-all duration-300 hover:-translate-y-1 hover:border-blue-500 hover:bg-gray-900">
             Contact Me
           </button>
         </div>
@@ -36,6 +48,7 @@ export default function Hero() {
             href="https://github.com/mubashir1255"
             target="_blank"
             rel="noreferrer"
+            className="transition hover:text-blue-400"
           >
             GitHub
           </a>
@@ -44,11 +57,33 @@ export default function Hero() {
             href="https://www.linkedin.com/"
             target="_blank"
             rel="noreferrer"
+            className="transition hover:text-blue-400"
           >
             LinkedIn
           </a>
         </div>
-      </div>
+
+        {/* Tech Stack */}
+        <div className="mt-12 flex flex-wrap justify-center gap-3">
+          {[
+            "Next.js",
+            "React",
+            "TypeScript",
+            "Tailwind CSS",
+            "Docker",
+            "AWS",
+            "PostgreSQL",
+            "Prisma",
+          ].map((tech) => (
+            <span
+              key={tech}
+              className="rounded-full border border-gray-700 bg-white/5 px-4 py-2 text-sm text-gray-300 transition duration-300 hover:border-blue-500 hover:text-white hover:shadow-lg hover:shadow-blue-500/20"
+            >
+              {tech}
+            </span>
+          ))}
+        </div>
+      </motion.div>
     </section>
   );
 }
